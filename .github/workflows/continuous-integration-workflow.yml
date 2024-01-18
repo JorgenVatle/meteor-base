@@ -10,7 +10,6 @@ jobs:
       matrix:
         version:
           # This must match what’s in versions.sh
-          - '2.14'
           - '3.0-beta.0'
 
     steps:
