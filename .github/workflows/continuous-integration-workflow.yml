@@ -26,3 +26,10 @@ jobs:
       env:
         CI_VERSION: ${{ matrix.version }}
         SKIP_CLEANUP: 1
+
+    - name: Login to Dockerhub
+      run: docker login --username jorgenvatle --password '${{ secrets.DOCKER_PASSWORD }}'
+
+    - name: Push to Dockerhub
+      run: ./push.sh
+
