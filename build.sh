@@ -8,8 +8,7 @@ build_cmd() {
 }
 
 build() {
-	# Retry up to five times
-	build_cmd $1 || build_cmd $1 || build_cmd $1 || build_cmd $1 || build_cmd $1
+	build_cmd $1
 }
 
 building_all_versions=true
