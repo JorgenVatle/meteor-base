@@ -66,3 +66,8 @@ export meteor_versions=(
 	'3.0.4'
 	'3.1'
 )
+
+# Allow override through environment variable
+if [ -n "$METEOR_VERSION" ]; then
+  meteor_versions=("$METEOR_VERSION")
+fi
