@@ -8,7 +8,7 @@ build_cmd() {
 }
 
 build() {
-	build_cmd $1
+	build_cmd "$1"
 }
 
 building_all_versions=true
