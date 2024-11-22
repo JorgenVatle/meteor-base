@@ -64,4 +64,5 @@ export meteor_versions=(
 	'3.0.2'
 	'3.0.3'
 	'3.0.4'
+	'3.1'
 )
