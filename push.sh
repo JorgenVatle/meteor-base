@@ -2,7 +2,6 @@
 
 source ./config.sh
 source ./support.sh
-source ./versions.sh
 
 for version in "${meteor_versions[@]}"; do
 	printf "${GREEN}Pushing Docker base image for Meteor ${version}...${NC}\n"

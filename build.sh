@@ -2,7 +2,6 @@
 
 source ./config.sh
 source ./support.sh
-source ./versions.sh
 
 build_cmd() {
 	docker build --build-arg "METEOR_VERSION=$1" --tag "$IMAGE_NAME:$1" ./src

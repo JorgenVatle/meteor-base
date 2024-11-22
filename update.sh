@@ -58,7 +58,7 @@ done
 
 # Update files for new Meteor version
 
-source ./versions.sh
+source ./config.sh
 newest_meteor_version="${meteor_versions[*]: -1}"
 
 do_sed $"s|          - '${newest_meteor_version}'|          - '${newest_meteor_version}'\\n          - '${new_meteor_version}'|" ./.github/workflows/continuous-integration-workflow.yml
@@ -71,7 +71,7 @@ do_sed "s|${newest_meteor_version}|${new_meteor_version}|g" ./example/app-with-n
 
 do_sed "s|${newest_meteor_version}|${new_meteor_version}|g" ./example/default.dockerfile
 
-do_sed $"s|'${newest_meteor_version}'|'${newest_meteor_version}' \\\\\n	'${new_meteor_version}'|" ./versions.sh
+do_sed $"s|'${newest_meteor_version}'|'${newest_meteor_version}' \\\\\n	'${new_meteor_version}'|" ./config.sh
 
 
 # Update files for new Node version

@@ -12,7 +12,7 @@ run_with_suppressed_output () {
 	fi
 }
 
-source ./versions.sh
+source ./config.sh
 
 if [ -n "${CI_VERSION:-}" ]; then
 	meteor_versions=( "$CI_VERSION" )

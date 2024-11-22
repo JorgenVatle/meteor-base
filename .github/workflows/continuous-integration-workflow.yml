@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         version:
-          # This must match what’s in versions.sh
+          # This must match what’s in config.sh
           - '1.9'
           - '1.9.1'
           - '1.9.2'
