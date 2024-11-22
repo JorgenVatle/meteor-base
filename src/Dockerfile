@@ -35,8 +35,10 @@ COPY ./docker $SCRIPTS_FOLDER/
 RUN cd $SCRIPTS_FOLDER && \
 	if bash -c "if [[ ${METEOR_VERSION} == 1.6* ]]; then exit 0; else exit 1; fi"; then \
 		meteor npm install; \
+		echo "npm install: completed"; \
 	else \
 		meteor npm ci; \
+		echo "npm ci: completed"; \
 	fi
 
 # No ONBUILD lines, because this is intended to be used by your app’s multistage Dockerfile and you might need control of the sequence of steps using files from this image
