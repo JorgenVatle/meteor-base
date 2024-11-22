@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-source ./support.sh
 
+source ./support.sh
+source ./versions.sh
 
 build_cmd() {
 	docker build --build-arg "METEOR_VERSION=$1" --tag geoffreybooth/meteor-base:"$1" ./src
@@ -10,9 +11,6 @@ build() {
 	# Retry up to five times
 	build_cmd $1 || build_cmd $1 || build_cmd $1 || build_cmd $1 || build_cmd $1
 }
-
-
-source ./versions.sh
 
 building_all_versions=true
 if [ -n "${CI_VERSION:-}" ]; then

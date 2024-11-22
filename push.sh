@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
+
 source ./support.sh
-
-
 source ./versions.sh
 
 for version in "${meteor_versions[@]}"; do
