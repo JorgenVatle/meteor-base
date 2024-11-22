@@ -1,1 +1,1 @@
-IMAGE_NAME=geoffreybooth/meteor-base
+export IMAGE_NAME=geoffreybooth/meteor-base
