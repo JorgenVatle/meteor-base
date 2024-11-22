@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export IMAGE_NAME=geoffreybooth/meteor-base
+export IMAGE_NAME=jorgenvatle/meteor-base
 
 # Versions to build this Docker image for
 export meteor_versions=(
